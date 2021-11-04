@@ -15,12 +15,6 @@ programmatic extraction and modification of parameters of Jupyter notebooks.
 python -m pip install nbclick
 ```
 
-Alternatively, it can be run without installation using `pipx`:
-
-```
-pipx run nbclick
-```
-
 ## Running nbclick
 
 After installation, you can run `nbclick` using the commandline:
