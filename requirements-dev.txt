@@ -1,2 +1,3 @@
+ipykernel
 pre-commit
 pytest
