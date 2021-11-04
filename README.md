@@ -1,4 +1,4 @@
-# nbclick - Turn Jupyter notebooks into command line application
+# nbclick - Turn Jupyter notebooks into command line applications
 
 `nbclick` allows you to modify and run Jupyter notebooks from the commandline.
 It builds on top of [nbparameterise](https://github.com/takluyver/nbparameterise) which allows
@@ -44,7 +44,7 @@ outfile = "output.csv"  # The filename to store the results
 For above case, the output of `nbclick notebook.ipynb --help` will be:
 
 ```
-Usage: nbclick ./test/test1.ipynb [OPTIONS]
+Usage: nbclick notebook.ipynb [OPTIONS]
 
 Options:
   --num_samples INTEGER  The number of samples to draw  [default: 1000]
