@@ -1,5 +1,8 @@
 # nbclick - Turn Jupyter notebooks into command line applications
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPI version](https://badge.fury.io/py/nbclick.svg)](https://badge.fury.io/py/nbclick)
+
 `nbclick` allows you to modify and run Jupyter notebooks from the commandline.
 It builds on top of [nbparameterise](https://github.com/takluyver/nbparameterise) which allows
 programmatic extraction and modification of parameters of Jupyter notebooks.
@@ -9,7 +12,13 @@ programmatic extraction and modification of parameters of Jupyter notebooks.
 `nbclick` can be installed using `pip`:
 
 ```
-python -m pip install git+https://github.com/ssciwr/nbclick.git
+python -m pip install nbclick
+```
+
+Alternatively, it can be run without installation using `pipx`:
+
+```
+pipx run nbclick
 ```
 
 ## Running nbclick
