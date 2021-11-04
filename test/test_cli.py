@@ -22,6 +22,8 @@ def test_help():
     [
         ("integer.ipynb", ["--num_samples", "20"]),
         ("string.ipynb", ["--outfile", "blubb.txt"]),
+        ("boolean.ipynb", ["--output"]),
+        ("boolean.ipynb", ["--no-output"]),
     ],
 )
 def test_datatypes(data):

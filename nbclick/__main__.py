@@ -28,10 +28,15 @@ class NotebookCommandClass(click.MultiCommand):
                 # This removes the '#' from the comment
                 help = help[1:].strip()
 
+            # Create the name of the flag
+            flag = f"--{param.name}"
+            if issubclass(param.type, bool):
+                flag = f"--{param.name}/--no-{param.name}"
+
             # Create a click option from the given parameter
             click_params.append(
                 click.Option(
-                    (f"--{param.name}",),
+                    (flag,),
                     default=param.value,
                     type=param.type,
                     show_default=True,
