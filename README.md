@@ -9,7 +9,7 @@ programmatic extraction and modification of parameters of Jupyter notebooks.
 `nbclick` can be installed using `pip`:
 
 ```
-python -m pip install ...
+python -m pip install git+https://github.com/ssciwr/nbclick.git
 ```
 
 ## Running nbclick
