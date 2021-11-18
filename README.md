@@ -15,12 +15,21 @@ programmatic extraction and modification of parameters of Jupyter notebooks.
 python -m pip install nbclick
 ```
 
+It is also possible to run `nbclick` without prior installation using `pipx`:
+
+```
+pipx run --system-site-packages nbclick
+```
+
+Note that the `--system-site-packages` flag is absolutely necessary if your notebook depends
+on any non-standard library Python package.
+
 ## Running nbclick
 
 After installation, you can run `nbclick` using the commandline:
 
 ```
-nbclick --help
+nbclick
 ```
 
 The most important argument is the `NOTEBOOK` parameter. For a given notebook,
@@ -29,9 +38,6 @@ you can again use `--help` to display the configuration options:
 ```
 nbclick mynotebook.ipynb --help
 ```
-
-Running without `--help` will programmatically execute the notebook with
-the parameters specified on the command line.
 
 ## Preparing a notebook for execution with nbclick
 
