@@ -24,6 +24,8 @@ def test_help():
         ("string.ipynb", ["--outfile", "blubb.txt"]),
         ("boolean.ipynb", ["--output"]),
         ("boolean.ipynb", ["--no-output"]),
+        ("list.ipynb", ["--integers", "1", "2", "3"]),
+        ("hetlist.ipynb", ["--mixed", "17", "wrong"]),
     ],
 )
 def test_datatypes(data):

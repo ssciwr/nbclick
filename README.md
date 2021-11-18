@@ -55,3 +55,15 @@ Options:
                          output.csv]
   --help                 Show this message and exit.
 ```
+
+## Limitations
+
+There are a few known limitations that result from upstream projects that I currently
+do not plan to fix for `nbclick`:
+
+* The number of parameter types recognized is quite small. `nbclick` is known to work
+  with `int`, `float`, `bool`, `str`, `list` (of both homogeneous and heterogeneous type).
+  Most notably, `nbparameterise` does not support `tuple`s.
+* List parameters are restricted to fixed length (defined by their default). This results
+  from `click` voluntarily chosing not to provide variable length list parameters, as it
+  introduces ambiguity of the parser.
