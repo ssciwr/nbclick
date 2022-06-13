@@ -40,7 +40,7 @@ class NotebookCommandClass(click.MultiCommand):
             if issubclass(param.type, list):
                 types = tuple(type(item) for item in param.value)
                 if len(set(types)) == 1:
-                    # This is a list of a single type, we realize it by click';s
+                    # This is a list of a single type, we realize it by click's
                     # nargs option. click does not support variable length list parameters
                     # because they result in ambiguous parser behaviour
                     opt_args["nargs"] = len(param.value)
