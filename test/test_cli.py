@@ -43,3 +43,9 @@ def test_datatypes(data):
     # Run with modified input
     result = runner.invoke(main, [notebook_file(notebook)] + params)
     assert result.exit_code == 0
+
+
+def test_noparams_notebook():
+    runner = CliRunner()
+    result = runner.invoke(main, [notebook_file("noparams.ipynb")])
+    assert result.exit_code == 0
