@@ -62,9 +62,15 @@ class NotebookCommandClass(click.MultiCommand):
             click_params.append(click.Option((flag,), **opt_args))
 
         def callback(**parameters):
-            new_params = nbparameterise.parameter_values(old_params, **parameters)
-            new_nb = nbparameterise.replace_definitions(nb, new_params)
-            nbclient.execute(new_nb)
+            if len(old_params) == 0:
+                # If no parameters were extracted, we execute the original notebook
+                # This make nbclick more robust as it also provides a CLI to execute
+                # unparametrized notebooks.
+                return nbclient.execute(nb)
+            else:
+                new_params = nbparameterise.parameter_values(old_params, **parameters)
+                new_nb = nbparameterise.replace_definitions(nb, new_params)
+                nbclient.execute(new_nb)
 
         return click.Command(name, params=click_params, callback=callback)
 
