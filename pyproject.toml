@@ -1,12 +1,12 @@
 [build-system]
 requires = [
-    "setuptools>=61",
+    "setuptools >=61",
+    "setuptools_scm[toml] >=7",
 ]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "nbclick"
-version = "1.0.0"
 description = "Modify and run Jupyter notebooks from the command line"
 readme = "README.md"
 maintainers = [
@@ -25,6 +25,7 @@ dependencies = [
     "nbformat >=5.1",
     "nbparameterise >=0.5",
 ]
+dynamic = ["version"]
 
 [project.scripts]
 nbclick = "nbclick.__main__:main"
@@ -38,3 +39,8 @@ tests = [
 packages = [
     "nbclick",
 ]
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "node-and-date"
+write_to = "nbclick/_version.py"
