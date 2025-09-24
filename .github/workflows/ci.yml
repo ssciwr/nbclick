@@ -15,11 +15,11 @@ on:
 jobs:
   linux-test:
     name: Testing on Linux
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v5
       with:
         fetch-depth: 0
 
